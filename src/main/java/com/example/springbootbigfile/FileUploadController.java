@@ -1,6 +1,8 @@
 package com.example.springbootbigfile;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -42,9 +44,12 @@ public class FileUploadController {
 
     @RequestMapping(value = "/upload/merge")
     @ResponseBody
-    public JsonResult<Object> uploadPart(String sysId, String fileName) {
+    public Map<String, Object> uploadPart(String sysId, String fileName) {
         fileUploadUtils.mergeTmpFilePart(sysId, sysId, fileName);
-        return JsonResult.success();
+        Map<String, Object> result = new HashMap<>();
+        result.put("code", 200);
+        result.put("message", "上传成功");
+        return result;
     }
 
 }
