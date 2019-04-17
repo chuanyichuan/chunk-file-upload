@@ -1,2 +1,1 @@
-# chunk-file-upload
-大文件分片上传
+使用百度WebUploader js框架进行大文件分片上传
