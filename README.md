@@ -1,4 +1,5 @@
 使用百度WebUploader js框架进行大文件分片上传
+WebUploader的api文档地址： http://fex.baidu.com/webuploader/doc/index.html
 
 1、边上传边合并
 前端将大文件分片上传，后端服务接收分片文件直接合并到最终文件
